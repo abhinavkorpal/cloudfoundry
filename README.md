@@ -49,17 +49,25 @@ mymongo is name of the instance
 
 cf services
 
-# creating YAML :
+# Creating YAML :
 
-cloudfoundry works on the heroku buildpack model 
+Cloudfoundry works on the heroku buildpack model 
 
-# During deployment: Cloud controller create records, tell the cloud controller to create a record for the application in its local database
+# During deployment: 
+
+Cloud controller create records, tell the cloud controller to create a record for the application in its local database.
+
 Cloud controller store some of the metadata, the application name, how many instance this should have who is the user was, what buildpack it's using.
-it stores the application filesin blob store, cloud controller stores app files
-Appl start command issued
-cloud controller chooses the staging DEA
-staging DEA caches package
-cloud controller chooses runtime DEA
+
+It stores the application filesin blob store, cloud controller stores app files.
+
+Appl start command issued.
+
+Cloud controller chooses the staging DEA
+
+Staging DEA caches package
+
+Cloud controller chooses runtime DEA
 
 # Deploying Application via CLI:
 
