@@ -116,3 +116,9 @@ cf set-env helloworld ENVIRONMENT prod
 cf map-route helloworld-stg cfapps.io -n helloworld
 
 cf unmap-route
+
+# Manifest Concept:
+
+ cf | grep manifest
+
+ cf create-app-manifest helloworld -p ./manifest.yml
