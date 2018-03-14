@@ -113,9 +113,11 @@ cf set-env helloworld ENVIRONMENT prod
 
 # blue and green deployment:
 
-cf map-route helloworld-stg cfapps.io -n helloworld
+cf push hellworld-stage -n hellworld-stage
 
-cf unmap-route
+cf map-route hellworld-stage cfapps.io -n hellworld
+
+cf app hellworld-stage
 
 # Manifest Concept:
 
