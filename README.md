@@ -145,9 +145,13 @@ cf app hellworld-stage
  - Droplet is actually build with in the container
  
  cf security-groups
+ 
  cf security-group credhub-internal-z2
+ 
  cf running-security-groups
+ 
  cf unbind-running-security-group all_open
  
  cf create-security-group
+ 
  cf bind-security-group
