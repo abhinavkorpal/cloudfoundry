@@ -155,3 +155,41 @@ cf app hellworld-stage
  cf create-security-group
  
  cf bind-security-group
+ 
+ cf push node -m 128M --random-route 
+
+# pivotal network
+
+# polymorphic platform
+
+# self serve platform and it allow to easily push an application
+
+# microservice based architecture and operstionally robust
+
+cf logs articulate --recent
+
+cf push articulate -p ./articulate/articulate-0.2.jar --random-route
+
+cf logs articulate --recent
+
+cf scale articulate -m 1G
+
+cf logs articulate | grep "API\|CELL"
+
+cf events articulate
+
+cf push attendee-service -p attendee-service/attendee-service-0.1.jar --random-route
+
+Manifest Concept:
+
+ cf | grep manifest
+
+ cf create-app-manifest helloworld -p ./manifest.yml
+
+cf create-user-provided-service attendee-service -p uri
+
+cf create-service p-mysql 100mb-dev attendee-mysql
+
+cf bind-service attendee-service attendee-mysql
+
+cf restart attendee-service
