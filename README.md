@@ -117,7 +117,21 @@ cf push hellworld-stage -n hellworld-stage
 
 cf map-route hellworld-stage cfapps.io -n hellworld
 
+cf unmap-route hellworld-stage cfapps.io -n hellworld
+
 cf app hellworld-stage
+
+--Zero downtime when upgrading can be accomplished with blue-green deployments.
+--Distribution of traffic is controlled by the percentage of app instances per version against the total number of app instances bound to the route.
+
+--Serializing ObjectsL: if using Serializing Objects, don't make destructive changes. e.g: don't remove fields, do have a serialVersionUID
+
+--Admin Processes: Run admin/mgmt tasks as one-ff processes. e.g: migrating data
+
+--Database: Do make changes idempotent. e.g: copy data to a new field (don't delete data)
+            No destructive database changes allowed. e.g: don't drop a column
+            Do have backwards compatible changes. e.g: nullable fields
+
 
 # Manifest Concept:
 
