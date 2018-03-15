@@ -138,3 +138,16 @@ cf app hellworld-stage
  cf | grep manifest
 
  cf create-app-manifest helloworld -p ./manifest.yml
+ 
+ # Application security group:
+
+ - Are virtual firewall that control egress/outbound traffic for application
+ - Droplet is actually build with in the container
+ 
+ cf security-groups
+ cf security-group credhub-internal-z2
+ cf running-security-groups
+ cf unbind-running-security-group all_open
+ 
+ cf create-security-group
+ cf bind-security-group
