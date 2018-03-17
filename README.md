@@ -180,7 +180,7 @@ cf events articulate
 
 cf push attendee-service -p attendee-service/attendee-service-0.1.jar --random-route
 
-Manifest Concept:
+# Manifest Concept:
 
  cf | grep manifest
 
@@ -193,3 +193,11 @@ cf create-service p-mysql 100mb-dev attendee-mysql
 cf bind-service attendee-service attendee-mysql
 
 cf restart attendee-service
+
+# Autoscaler:
+
+cf m -s app-autoscaler
+
+cf create-service app-autoscaler standard autoscaler
+
+cf bind-service helloworldstage1 autoscaler
