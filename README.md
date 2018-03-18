@@ -201,3 +201,13 @@ cf m -s app-autoscaler
 cf create-service app-autoscaler standard autoscaler
 
 cf bind-service helloworldstage1 autoscaler
+
+# Build pack API:
+
+bin/delete: determine whether the buildpack can stage the application
+
+bin/compile: builds the droplet
+
+bin/release: provide information on how to run the application
+
+cf buildpacks
